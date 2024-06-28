@@ -2,13 +2,13 @@
 import { writable } from 'svelte/store';
 import * as THREE from 'three';
 
-import { animationService } from '$lib/three/AnimationService';
-import { cameraService } from '$lib/three/CameraService';
-import { eventService } from '$lib/three/EventService';
-import { helperService } from '$lib/three/HelperService';
-import { loaderService } from '$lib/three/LoaderService';
-import { renderService } from '$lib/three/RenderService';
-import { sceneService } from '$lib/three/SceneService';
+import { animationService } from '$lib/UITools/threeServices/AnimationService';
+import { cameraService } from '$lib/UITools/threeServices/CameraService';
+import { eventService } from '$lib/UITools/threeServices/EventService';
+import { helperService } from '$lib/UITools/threeServices/HelperService';
+import { loaderService } from '$lib/UITools/threeServices/LoaderService';
+import { renderService } from '$lib/UITools/threeServices/RenderService';
+import { sceneService } from '$lib/UITools/threeServices/SceneService';
 
 const MAX_WEBGL_CONTEXTS = 5;
 let renderers = []; // Stocker les instances de renderer
