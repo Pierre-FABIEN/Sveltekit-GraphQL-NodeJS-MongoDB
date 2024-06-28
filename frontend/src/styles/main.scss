@@ -1,11 +1,12 @@
 /* Variables and mixins declared here will be available in all other SCSS files */
 //C:\wamp64\www\BoilerPlateSvelteKit\src\CSS\utils\_variables.scss
-@import './src/styles/utils/variables';
-@import './src/styles/utils/functions';
-@import './src/styles/utils/breackpoints';
-@import './src/styles/utils/flex';
-@import './src/styles/utils/mixins';
-@import './src/styles/utils/vendors';
+
+// @import './src/styles/utils/variables';
+// @import './src/styles/utils/functions';
+// @import './src/styles/utils/breackpoints';
+// @import './src/styles/utils/flex';
+// @import './src/styles/utils/mixins';
+// @import './src/styles/utils/vendors';
 
 @import './src/styles/base/fonts';
 @import './src/styles/base/reset';
@@ -24,7 +25,7 @@
 
 // @import './pages/home';
 // @import './pages/about';
-@import './src/styles/pages/page';
+//@import './src/styles/pages/page';
 
 .scroll-content {
   min-height: 100vh;
@@ -101,7 +102,7 @@ header {
 }
 
 main {
-  //margin-top: 70px;
+  margin-top: 70px;
 }
 
 .line {
