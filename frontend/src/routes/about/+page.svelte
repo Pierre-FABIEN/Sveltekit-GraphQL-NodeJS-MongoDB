@@ -10,7 +10,7 @@
   let title: HTMLElement
   let text: HTMLElement
   let link: HTMLElement
-  let path: string
+  let path: string | null | undefined
 
   onNavigate((navigation) => {
     path = navigation.to?.route.id

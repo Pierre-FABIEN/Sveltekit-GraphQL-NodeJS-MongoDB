@@ -5,14 +5,12 @@
   import App from '$lib/js/index'
   import { registerServiceWorker } from '$UITools/serviceWorker'
   import Header from '$components/Header.svelte'
-  import PageTransition from '$UITools/PageTransition/index.svelte'
   import Cursor from '$UITools/Cursor/index.svelte'
   import Loader from '$UITools/InitialLoader/index.svelte'
   import SmoothScroller from '$UITools/SmoothScroller/index.svelte'
   import NotificationWrapper from '$UITools/Notifications/NotificationWrapper.svelte'
   import {
     firstLoadComplete,
-    loadingStates,
     setFirstOpen,
     setRessourceToValide,
   } from '$stores/UX/initialLoaderStore'
@@ -22,8 +20,6 @@
 
   onNavigate(async (navigation) => {
     if (!document.startViewTransition) return
-
-    //console.log("1. Capture de l'état actuel du DOM");
 
     await new Promise<void>((resolve) => {
       document.startViewTransition(async () => {

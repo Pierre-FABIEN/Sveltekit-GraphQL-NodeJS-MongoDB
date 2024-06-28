@@ -1,23 +1,21 @@
 <script lang="ts">
-  import { onDestroy, onMount } from 'svelte'
+  import { onMount } from 'svelte'
   import { hoverable } from '$UITools/Cursor/cursorHelpers'
   import { t } from '$UITools/Translations/index'
   import Box from '$three/Box.svelte'
-  import gsap from 'gsap'
 
   import Greetings from '$components/Greetings.svelte'
   import Slider from '$components/Slider.svelte'
   import { setTransitionLoader } from '$stores/UX/transitionLoaderStore'
   import { fetchMockData } from '$lib/utils/mockService'
   import { enter, exit } from './transition'
-  import { isAnimatingOut } from '$stores/UX/isAnimating'
   import { onNavigate } from '$app/navigation'
 
   const linkUrl: string = 'https://kit.svelte.dev'
   let title: HTMLElement
   let text: HTMLElement
   let link: HTMLElement
-  let path: string
+  let path: string | null | undefined
 
   onNavigate((navigation) => {
     path = navigation.to?.route.id
